@@ -92,6 +92,8 @@ unsigned int print_width(buffer_t *output, unsigned int printed,
 		unsigned char flags, int wid);
 unsigned int print_string_width(buffer_t *output,
 		unsigned char flags, int wid);
+unsigned int print_neg_width(buffer_t *output, unsigned int printed,
+		unsigned char flags, int wid);
 /* Helpers */
 buffer_t *init_buffer(void);
 void free_buffer(buffer_t *output);

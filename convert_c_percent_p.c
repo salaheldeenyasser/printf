@@ -1,4 +1,5 @@
-nclude "main.h"
+#include "main.h"
+#include <stdarg.h>
 unsigned int convert_c(va_list args, buffer_t *output,
 		unsigned char flags, int wid, int prec, unsigned char len);
 unsigned int convert_percent(va_list args, buffer_t *output,
@@ -23,7 +24,7 @@ unsigned int convert_c(va_list args, buffer_t *output,
 
 	(void)prec;
 	(void)len;
-	c = va_args(args, int);
+	c = va_arg(args, int);
 	ret += print_width(output, ret, flags, wid);
 	ret += _memcpy(output, &c, 1);
 	ret += print_neg_width(output, ret, flags, wid);
