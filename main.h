@@ -99,8 +99,8 @@ buffer_t *init_buffer(void);
 void free_buffer(buffer_t *output);
 unsigned int _memcpy(buffer_t *output, const char *src,
 		unsigned int n);
-unsigned int convert_sbase(buffer_t *output, const char *src,
-		unsigned int n);
+unsigned int convert_sbase(buffer_t *output, long int num, char *base,
+		unsigned char flags, int wid, int prec);
 unsigned int convert_ubase(buffer_t *output, unsigned long int num,
 		char *base, unsigned char flags, int wid, int prec);
 
